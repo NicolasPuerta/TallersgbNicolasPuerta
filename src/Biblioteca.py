@@ -22,12 +22,10 @@ class Biblioteca():
         20: {"titulo": "La guerra y la paz", "autor": "León Tolstói", "descripcion": "Guerra Napoleónica en Rusia", "fecha_publicacion": 1869, "disponibilidad": True},
         # Puedes agregar más libros siguiendo el mismo patrón
     }
-    def PrestarLibros(self,Titulo:str) -> str:
-        libro = {}
-        for j in self.catalogo_libros.values():
-            if j.titulo == Titulo:
-                j.disponibilidad = False
-                libro = j
-        
-        return libro if libro else {'titulo': 'No esta en el catalogo'}
+
+    def MostrarCatalogo(self):
+        for i in self.catalogo_libros.keys():
+            print(f'Libro {i}')
+            for j,k in self.catalogo_libros[i].items():
+                print(f' {j} : {k} ')
     
