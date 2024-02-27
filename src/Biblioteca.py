@@ -19,13 +19,13 @@ class Biblioteca():
         17: {"titulo": "El retrato de Dorian Gray", "autor": "Oscar Wilde", "descripcion": "Retrato envejecimiento", "fecha_publicacion": 1890, "disponibilidad": True},
         18: {"titulo": "El principito", "autor": "Antoine de Saint-Exupéry", "descripcion": "Viaje a través de asteroides", "fecha_publicacion": 1943, "disponibilidad": True},
         19: {"titulo": "Crimen y castigo", "autor": "Fyodor Dostoevsky", "descripcion": "Conciencia y crimen", "fecha_publicacion": 1866, "disponibilidad": True},
-        20: {"titulo": "La guerra y la paz", "autor": "León Tolstói", "descripcion": "Guerra Napoleónica en Rusia", "fecha_publicacion": 1869, "disponibilidad": True},
-        # Puedes agregar más libros siguiendo el mismo patrón
+        20: {"titulo": "La guerra y la paz", "autor": "León Tolstói", "descripcion": "Guerra Napoleónica en Rusia", "fecha_publicacion": 1869, "disponibilidad": True}
     }
 
     def MostrarCatalogo(self):
         for i in self.catalogo_libros.keys():
             print(f'Libro {i}')
             for j,k in self.catalogo_libros[i].items():
-                print(f' {j} : {k} ')
+                if(self.catalogo_libros[i]["disponibilidad"]):
+                    print(f' {j} : {k} ')
     
